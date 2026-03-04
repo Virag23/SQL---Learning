@@ -1,0 +1,162 @@
+SQL - STRUCTURED QUERY LANGUAGE
+==========================================================================================================================================
+
+SQL stands for Structured Query Language.
+It is used to communicate with databases to store, retrieve,
+update, and delete data.
+
+
+DATA
+----------------------------------------------------
+Data is a specific piece of information that can be stored
+and processed in a database.
+
+Example:
+Name, Age, Weight, Address, etc.
+
+
+TYPES OF DATA
+----------------------------------------------------
+
+1. Structured Data
+------------------
+Structured data is stored in a well-defined format such as
+rows and columns in a table.
+
+Example:
+
++------+-----+--------+
+| Name | Age | Weight |
++------+-----+--------+
+|  A   | 10  |  20    |
++------+-----+--------+
+
+
+2. Unstructured Data
+--------------------
+Unstructured data does not follow any specific format or structure.
+
+Example:
+Images, Videos, Audio files, Documents, etc.
+
+
+3. Semi-Structured Data
+-----------------------
+Semi-structured data is not stored in a strict table format,
+but it contains tags or key-value pairs to organize data.
+
+Example:
+
+{
+    Name   : "A",
+    Age    : 10,
+    Weight : 20
+}
+
+
+DATABASE
+----------------------------------------------------
+A database is a container used to store data in an organized
+form, usually in tables.
+
+Example Structure:
+
+Data  → Stored in Tables
+Tables → Stored in Database
+Database → Managed by Server
+
+
+Example Flow:
+
+Data (Table Format)
+      |
+      |
+Database (Container for tables)
+      |
+      |
+Server (Example: XAMPP)
+
+
+SERVER
+----------------------------------------------------
+A server is a system that manages database access and processes
+requests from users.
+
+Example:
+XAMPP, MySQL Server, PostgreSQL Server.
+
+
+DBMS (Database Management System)
+----------------------------------------------------
+DBMS stands for Database Management System.
+
+It is a software system used to manage databases and perform
+operations on data.
+
+Main operations of DBMS:
+• Create Data
+• Retrieve Data
+• Update Data
+• Delete Data
+
+These operations are also called CRUD operations.
+
+CRUD:
+C → Create
+R → Read / Retrieve
+U → Update
+D → Delete
+
+
+TYPES OF DBMS
+====================================================
+
+1. Flat File DBMS
+----------------------------------------------------
+In Flat File DBMS, data is stored in files and folders
+without complex relationships.
+
+Example:
+Text files, Excel files stored in a laptop.
+
+
+2. Hierarchical DBMS
+----------------------------------------------------
+Data is stored in a tree-like structure using parent-child
+relationships.
+
+Example:
+
+Parent
+  |
+  |---- Child 1
+  |
+  |---- Child 2
+
+
+3. Network DBMS
+----------------------------------------------------
+Data is stored in a network structure where multiple
+records can be connected with multiple relationships.
+
+
+4. Relational DBMS (RDBMS)
+----------------------------------------------------
+Data is stored in tabular format using rows and columns.
+
+Each table can be related to another table using keys.
+
+Example:
+
++----+-------+-----+
+| ID | Name  | Age |
++----+-------+-----+
+| 1  | A     | 20  |
+| 2  | B     | 22  |
++----+-------+-----+
+
+Examples of RDBMS:
+• MySQL
+• PostgreSQL
+• Oracle
+• SQL Server
