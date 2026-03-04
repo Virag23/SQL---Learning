@@ -1,0 +1,84 @@
+SQL BASIC NOTES
+================================================================================================================
+
+1. Table Structure
+------------------------------
+• Row  - Tuple / Record  
+• Column - Field / Attribute  
+• In a table we can specify the number of columns.  
+• But we cannot specify the number of rows because rows grow dynamically as data is inserted.
+
+
+2. SQL Syntax Rules
+------------------------------
+• SQL statements usually start with a KEYWORD.
+• Keywords are generally written in UPPERCASE for readability.
+• Each SQL statement ends with a semicolon (;)
+
+Example:
+SELECT * FROM students;
+
+
+3. Basic SQL Flow (Working Process)
+------------------------------
+1. CREATE DATABASE   - Create a new database
+2. CREATE TABLE      - Create tables inside the database
+3. INSERT INTO       - Insert data into the table
+4. SELECT            - Retrieve data from the table
+5. UPDATE            - Modify existing data
+6. DELETE            - Remove data from the table
+
+
+4. SQL Data Types
+==============================
+
+1. String / Character Types
+------------------------------
+CHAR(n)        - Fixed length string
+VARCHAR(n)     - Variable length string
+TEXT           - Large text data
+ENUM           - One value from a predefined list
+SET            - Multiple values from predefined list
+
+
+2. Numeric Data Types
+------------------------------
+INT            - Integer numbers
+TINYINT        - Very small integer
+SMALLINT       - Small integer
+MEDIUMINT      - Medium size integer
+BIGINT         - Large integer
+DECIMAL(p,s)   - Exact numeric values with precision
+FLOAT          - Floating point number
+DOUBLE         - Double precision floating number
+
+
+3. Date and Time Data Types
+------------------------------
+DATE           - Stores date (YYYY-MM-DD)
+TIME           - Stores time (HH:MM:SS)
+DATETIME       - Stores date and time
+TIMESTAMP      - Automatic date and time stamp
+YEAR           - Stores year value
+
+
+4. Boolean Type
+------------------------------
+BOOLEAN / BOOL - Stores TRUE or FALSE values
+
+
+5. Binary Data Types
+------------------------------
+BINARY         - Fixed length binary data
+VARBINARY      - Variable length binary data
+BLOB           - Binary Large Object (images, files)
+
+
+Example Table Creation
+------------------------------
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    age INT,
+    city VARCHAR(50)
+);
