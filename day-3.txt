@@ -1,0 +1,146 @@
+SQL PRACTICE – DAY 3
+=================================================
+
+1. Creating a Database
+-------------------------------------------------
+A database is created using the CREATE DATABASE command.
+
+Syntax:
+CREATE DATABASE database_name;
+
+Example:
+CREATE DATABASE fortune11;
+CREATE DATABASE cravita11;
+
+
+2. Creating Tables
+-------------------------------------------------
+Tables store data in rows and columns.
+
+Example Table Structure:
+
+emp111
+-------------------------
+id        INT
+name      VARCHAR
+salary    INT
+
+
+student222
+-------------------------
+id          INT
+pnr         BIGINT
+department  VARCHAR
+
+
+customer333
+-------------------------
+id              INT
+email           VARCHAR
+contact_number  BIGINT
+
+
+batch
+-------------------------
+id          INT
+start_date  DATE
+timing      TIME
+
+
+3. INSERT INTO (Adding Data)
+-------------------------------------------------
+The INSERT INTO command is used to add records into a table.
+
+Syntax:
+INSERT INTO table_name VALUES (value1, value2, value3);
+
+Example:
+
+INSERT INTO emp111 VALUES (101, "ABC", 25000);
+INSERT INTO emp111 VALUES (102, "DEF", 35000);
+INSERT INTO emp111 VALUES (103, "GHI", 10000);
+INSERT INTO emp111 VALUES (104, NULL, 20000);
+INSERT INTO emp111 VALUES (103, "PQR", 25000);
+
+
+4. Viewing Data
+-------------------------------------------------
+To display data from a table we use SELECT.
+
+Syntax:
+SELECT * FROM table_name;
+
+Example:
+SELECT * FROM emp111;
+
+Output:
+
+id   name   salary
+101  ABC    25000
+102  DEF    35000
+103  GHI    10000
+104  NULL   20000
+103  PQR    25000
+
+
+5. Working with NULL Values
+-------------------------------------------------
+NULL represents a missing or unknown value.
+
+Example:
+
+INSERT INTO student222 VALUES (null, "", null);
+INSERT INTO student222 VALUES (0, NULL, "CSE");
+INSERT INTO student222 VALUES (NULL, 45442155, "EnTC");
+
+
+6. Multiple Row Insertion
+-------------------------------------------------
+We can insert multiple records in a single query.
+
+Example:
+
+INSERT INTO batch VALUES
+(101, '2026-01-12', '08:00:00'),
+(102, '2026-02-12', '08:30:00'),
+(103, '2026-01-09', '10:00:00'),
+(104, '2026-02-08', '09:30:00'),
+(105, NULL, '08:00:00');
+
+
+7. Date and Time Datatypes
+-------------------------------------------------
+
+DATE
+Stores date values.
+Format:
+YYYY-MM-DD
+
+Example:
+2026-01-12
+
+
+TIME
+Stores time values.
+Format:
+HH:MM:SS
+
+Example:
+08:30:00
+
+
+8. Observations
+-------------------------------------------------
+• Tables contain rows (records) and columns (attributes).
+• Data can include NULL values.
+• Different datatypes are used depending on the data.
+• SELECT is used to retrieve data from tables.
+
+
+Example Query Used Today
+-------------------------------------------------
+
+SELECT * FROM emp111;
+SELECT * FROM student222;
+SELECT * FROM customer333;
+SELECT * FROM batch;
