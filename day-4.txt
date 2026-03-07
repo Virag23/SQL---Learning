@@ -1,0 +1,186 @@
+SQL LEARNING – DAY 4
+=================================================
+
+1. DROP
+-------------------------------------------------
+The DROP command is used to delete the entire object from the database.
+
+It can remove:
+• Whole Database
+• Whole Table
+• Column (using ALTER)
+
+Examples:
+
+Drop Database
+DROP DATABASE database_name;
+
+Drop Table
+DROP TABLE table_name;
+
+
+2. TRUNCATE
+-------------------------------------------------
+TRUNCATE is used to remove all records from a table
+but the table structure remains the same.
+
+Syntax:
+TRUNCATE TABLE table_name;
+
+Example:
+TRUNCATE TABLE emp111;
+
+
+3. DELETE
+-------------------------------------------------
+DELETE is used to remove specific rows from a table.
+
+Syntax:
+DELETE FROM table_name WHERE condition;
+
+Example:
+DELETE FROM batch WHERE id = 105;
+
+Delete all records:
+DELETE FROM batch;
+
+
+4. COPY DATA FROM ONE TABLE TO ANOTHER
+-------------------------------------------------
+Data can be copied from one table to another using SELECT.
+
+Syntax:
+INSERT INTO table_name
+SELECT * FROM another_table;
+
+Example:
+INSERT INTO class
+SELECT * FROM demo;
+
+
+5. ALTER TABLE
+-------------------------------------------------
+ALTER command is used to modify the structure of a table.
+
+Add Column
+--------------------------------
+ALTER TABLE class
+ADD COLUMN mentor VARCHAR(50);
+
+
+Modify Column
+--------------------------------
+ALTER TABLE customer333
+MODIFY COLUMN contact_number VARCHAR(50);
+
+
+Drop Column
+--------------------------------
+ALTER TABLE class
+DROP COLUMN city;
+
+
+Rename Column
+--------------------------------
+ALTER TABLE class
+RENAME COLUMN mentor TO faculty;
+
+
+Change Column Name and Datatype
+--------------------------------
+ALTER TABLE class
+CHANGE faculty mentor VARCHAR(50);
+
+
+6. SELECT STATEMENT
+-------------------------------------------------
+SELECT is used to retrieve data from a table.
+
+Select all columns:
+SELECT * FROM emp1;
+
+Select specific column:
+SELECT name FROM emp1;
+
+
+7. UNIQUE VALUES (DISTINCT)
+-------------------------------------------------
+DISTINCT is used to remove duplicate values.
+
+Example:
+
+SELECT DISTINCT name FROM emp111;
+
+SELECT DISTINCT * FROM emp111;
+
+
+8. FUNCTIONS IN SQL
+=================================================
+
+Functions are used to perform specific operations on data.
+
+There are two types of SQL Functions:
+
+
+A. SRF – Single Row Function
+-------------------------------------------------
+• Works on a single row at a time
+• Returns different output for each row
+
+Example Concept:
+
+Row1 → Function → Output1
+Row2 → Function → Output2
+Row3 → Function → Output3
+
+
+B. MRF – Multi Row Function
+-------------------------------------------------
+• Works on multiple rows
+• Returns a single output
+
+Example Concept:
+
+Row1
+Row2
+Row3
+Row4
+  ↓
+Function
+  ↓
+Single Output
+
+
+9. COUNT FUNCTION
+-------------------------------------------------
+COUNT is an aggregate function used to count records.
+
+Count specific column values:
+SELECT COUNT(name) FROM emp111;
+
+Count all rows:
+SELECT COUNT(*) FROM emp111;
+
+Count unique values:
+SELECT COUNT(DISTINCT name) FROM emp111;
+
+
+10. LIMIT
+-------------------------------------------------
+LIMIT is used to restrict the number of records returned.
+
+Syntax:
+SELECT * FROM table_name LIMIT number;
+
+Example:
+SELECT * FROM emp111 LIMIT 3;
+
+
+11. DELETE EXAMPLES
+-------------------------------------------------
+
+Delete specific record:
+DELETE FROM batch WHERE id = 105;
+
+Delete all records from table:
+DELETE FROM batch;
