@@ -1,0 +1,119 @@
+SQL LEARNING – DAY 5
+=================================================
+
+
+
+1.SELECT AS
+-------------------------------------------------
+ •SQL AS is used to assign temporarily a new name to a table column.
+   
+  Syntax-
+      SELECT column_name AS column_name FROM table_name;
+ 
+  Example-
+      SELECT uername AS 'name' FROM student; 
+
+
+
+
+
+2.SELECT IN
+-------------------------------------------------
+ •It minimizes the use of SQL OR operator.
+
+  Syntax-
+      SELECT * FROM table_name WHERE column_name IN (val1,val2,….);
+
+  Example-
+     SELECT * FROM student WHERE name IN ('abc','lmn');
+
+
+
+
+
+3.SELECT SUM
+-------------------------------------------------
+  •Known as SQL SUM() function.
+  •It is used in a SQL query to return summed value of an expression.
+
+   Syntax-
+      SELECT SUM (column_name) AS “expression_name” FROM table_name;
+
+   Example-
+      SELECT SUM (salary) AS “total salary” FROM employee;
+
+
+
+
+4.SELECT NULL
+-------------------------------------------------
+  •Null values are used to represent missing unknown data.
+  •Conditions- (1) IS NULL
+               (2) IS NOT NULL
+
+
+  (1) IS NULL- Select records with null values.
+
+      Syntax-
+         SELECT column_name FROM table_name WHERE column_name IS NULL;
+      
+      Example-
+         SELECT name FROM student WHERE marks IS NULL;
+
+ 
+
+  (2) IS NOT NULL-Select records with no null values.
+
+      Syntax-
+         SELECT column_name FROM table_name WHERE column_name IS NOT NULL;
+      
+      Example-
+          SELECT name FROM student WHERE marks IS NOT NULL;
+
+
+
+
+
+5.WHERE 
+-------------------------------------------------
+
+  •It is used to specify a condition while fetching the data from a 
+   single table or by joining with multiple tables.
+
+   Syntax-
+       SELECT * FROM table_name WHERE condition;
+
+   Example-
+       SELECT * FROM student WHERE id=1;
+
+
+
+
+6.AND 
+-------------------------------------------------
+  •AND condition is used in SQL query to create two or more conditions to be met.
+
+   Syntax-
+      SELECT * FROM table_name WHERE condition1 AND condition2;
+
+   Example-
+      SELECT * FROM student WHERE id=1 AND name=‘abc’;
+
+
+
+
+
+7.OR
+-------------------------------------------------
+  •The ORoperator is used to combine multiple conditions in an SQL statement's 
+   WHERE clause.
+  
+   Syntax-
+      SELECT * FROM table_name WHERE condition1 OR condition2;
+
+   Example-
+      SELECT * FROM student WHERE id=1 OR id=5;
+
+         
+
+

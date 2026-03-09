@@ -8,8 +8,7 @@ update, and delete data.
 
 DATA
 ----------------------------------------------------
-Data is a specific piece of information that can be stored
-and processed in a database.
+Data is a specific piece of information that can be stored and processed in a database.
 
 Example:
 Name, Age, Weight, Address, etc.
@@ -20,8 +19,7 @@ TYPES OF DATA
 
 1. Structured Data
 ------------------
-Structured data is stored in a well-defined format such as
-rows and columns in a table.
+Structured data is stored in a well-defined format such as rows and columns in a table.
 
 Example:
 
@@ -42,8 +40,7 @@ Images, Videos, Audio files, Documents, etc.
 
 3. Semi-Structured Data
 -----------------------
-Semi-structured data is not stored in a strict table format,
-but it contains tags or key-value pairs to organize data.
+Semi-structured data is not stored in a strict table format, but it contains tags or key-value pairs to organize data.
 
 Example:
 
@@ -56,8 +53,7 @@ Example:
 
 DATABASE
 ----------------------------------------------------
-A database is a container used to store data in an organized
-form, usually in tables.
+A database is a container used to store data in an organized form, usually in tables.
 
 Example Structure:
 
