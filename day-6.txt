@@ -1,4 +1,4 @@
-SQL LEARNING – DAY 5
+SQL LEARNING – DAY 6
 =================================================
 
 1. ORDER BY
