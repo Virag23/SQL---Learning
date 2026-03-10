@@ -1,0 +1,117 @@
+SQL LEARNING – DAY 5
+=================================================
+
+1. ORDER BY
+-------------------------------------------------
+ORDER BY is used to sort the records of a table
+in ascending or descending order.
+
+Syntax:
+SELECT column_name FROM table_name
+ORDER BY column_name [ASC | DESC];
+
+
+2. ORDER BY ASC (Ascending Order)
+-------------------------------------------------
+ASC means ascending order (smallest → largest).
+
+Example:
+SELECT * FROM emp111 ORDER BY id ASC;
+
+Output will be sorted like:
+101
+102
+103
+104
+
+Note:
+ASC is the default order in SQL.
+
+
+3. ORDER BY DESC (Descending Order)
+-------------------------------------------------
+DESC means descending order (largest → smallest).
+
+Example:
+SELECT * FROM emp111 ORDER BY id DESC;
+
+Output will be sorted like:
+104
+103
+102
+101
+
+
+4. ORDER BY RAND()
+-------------------------------------------------
+RAND() is used to display records in random order.
+
+Example:
+SELECT * FROM emp111 ORDER BY RAND();
+
+Every time the query runs,
+records will appear in a different random order.
+
+
+5. ORDER BY RAND(id)
+-------------------------------------------------
+RAND(id) generates a random order based on a seed value.
+
+Example:
+SELECT * FROM emp111 ORDER BY RAND(id);
+
+This will shuffle the records randomly
+based on the id value.
+
+
+6. RANDOM RECORDS WITH LIMIT
+-------------------------------------------------
+LIMIT is used to restrict the number of rows returned.
+
+Example:
+SELECT * FROM emp111 ORDER BY RAND(id) LIMIT 4;
+
+Explanation:
+• Records are shuffled randomly
+• Only 4 rows are displayed
+
+
+7. COMBINING ORDER BY AND LIMIT
+-------------------------------------------------
+Example:
+SELECT * FROM emp111 ORDER BY RAND() LIMIT 4;
+
+This will:
+1. Randomize the rows
+2. Display only 4 records
+
+
+8. UPDATE Command
+-------------------------------------------------
+UPDATE is used to modify existing records in a table.
+
+Syntax:
+UPDATE table_name
+SET column_name = value
+WHERE condition;
+
+
+9. Update Specific Record
+-------------------------------------------------
+Example:
+UPDATE class
+SET Classroom_no = "150"
+WHERE id = 101;
+
+This updates the Classroom number for the record where id = 101.
+
+
+10. Update All Records
+-------------------------------------------------
+If WHERE clause is not used, all rows will be updated.
+
+Example:
+UPDATE class
+SET mentor = "ABC";
+
+This sets mentor as "ABC" for every record in the table.
