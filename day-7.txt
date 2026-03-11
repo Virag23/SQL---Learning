@@ -1,0 +1,106 @@
+SQL LEARNING – DAY 7
+=================================================
+
+1. JOIN
+-------------------------------------------------
+JOIN is used to combine data from two or more tables based on a related column between them.
+
+Example Tables:
+
+Table 1 : class1
+-------------------------
+id | name | salary
+-------------------------
+1  | A    | 30000
+2  | B    | 50000
+
+
+Table 2 : class2
+-------------------------
+id | contact | city
+-------------------------
+1  | 987654  | Pune
+2  | 876543  | Mumbai
+
+
+When JOIN is applied, records from both tables are combined based on the common column (id).
+
+
+2. Types of JOIN
+=================================================
+
+1. INNER JOIN
+2. LEFT JOIN
+3. RIGHT JOIN
+4. FULL OUTER JOIN
+5. CROSS JOIN
+
+
+3. INNER JOIN
+-------------------------------------------------
+INNER JOIN returns only the rows that have matching values in both tables.
+
+Syntax:
+SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column;
+
+Example:
+SELECT * FROM class1 INNER JOIN class2 ON class1.id = class2.id;
+
+Result:
+Only records where id exists in both tables.
+
+
+4. LEFT JOIN
+-------------------------------------------------
+LEFT JOIN returns all records from the left table and the matching records from the right table.
+
+If there is no match in the right table, NULL values will be returned.
+
+Syntax:
+SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column;
+
+Example:
+SELECT * FROM class1 LEFT JOIN class2 ON class1.id = class2.id;
+
+
+5. RIGHT JOIN
+-------------------------------------------------
+RIGHT JOIN returns all records from the right table and the matching records from the left table.
+
+If there is no match in the left table, fNULL values will appear.
+
+Syntax:
+SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column;
+
+Example:
+SELECT * FROM class1 RIGHT JOIN class2 ON class1.id = class2.id;
+
+6. FULL OUTER JOIN
+-------------------------------------------------
+FULL OUTER JOIN returns:
+• All rows from both tables
+• Matching rows combined
+• Non-matching rows filled with NULL values
+
+MySQL does not directly support FULL OUTER JOIN. It can be achieved using UNION.
+
+Example:
+SELECT * FROM class1 LEFT JOIN class2 on class1.id=class2.id
+UNION
+SELECT * FROM class1 RIGHT JOIN class2 on class1.id=class2.id;
+
+
+7. CROSS JOIN
+-------------------------------------------------
+CROSS JOIN returns the Cartesian product of both tables.
+
+Each row from the first table is combined with every row from the second table.
+
+Syntax:
+SELECT * FROM table1 CROSS JOIN table2;
+
+Example:
+SELECT * FROM class1 CROSS JOIN class2;
+
+Another way to write CROSS JOIN:
+SELECT * FROM class1, class2;
