@@ -1,0 +1,117 @@
+SQL LEARNING – DAY 8
+=================================================
+
+1. HAVING CLAUSE
+-------------------------------------------------
+The HAVING clause is used to filter grouped data.
+It is mainly used with GROUP BY and aggregate functions.
+
+Difference:
+• WHERE filters rows before grouping
+• HAVING filters groups after GROUP BY
+
+Syntax:
+SELECT column_name, AGGREGATE_FUNCTION(column_name)
+FROM table_name
+GROUP BY column_name
+HAVING condition;
+
+Example:
+SELECT dept, COUNT(id)
+FROM company
+GROUP BY dept
+HAVING COUNT(id) > 2;
+
+Explanation:
+This query returns departments where the number of employees is greater than 2.
+
+
+2. LIKE OPERATOR
+-------------------------------------------------
+The LIKE operator is used in a WHERE clause to search for a specified pattern within text data.
+It is commonly used with wildcard characters.
+
+Wildcards:
+%  → Represents zero, one, or multiple characters
+_  → Represents exactly one character
+
+
+Example 1:
+SELECT * 
+FROM emp111
+WHERE name LIKE 'a%';
+
+Explanation:
+Returns all records where the name starts with 'a'.
+
+
+Example 2:
+SELECT *
+FROM emp111
+WHERE name LIKE '_a';
+
+Explanation:
+Returns records where the second character is 'a'.
+
+
+Common LIKE Patterns:
+
+'a%'   → Starts with a  
+'%a'   → Ends with a  
+'%a%'  → Contains a anywhere  
+'_a%'  → Second letter is a  
+
+
+3. BETWEEN OPERATOR
+-------------------------------------------------
+The BETWEEN operator is used to select values within a range.
+
+It works with:
+• Numbers
+• Text
+• Dates
+
+Syntax:
+SELECT column_name
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+Example:
+SELECT salary
+FROM emp111
+WHERE salary BETWEEN 10000 AND 30000;
+
+Explanation:
+Returns records where salary is between 10000 and 30000.
+
+
+4. IN OPERATOR
+-------------------------------------------------
+The IN operator is used to filter records that match any value from a given list.
+
+It is a shorter way of writing multiple OR conditions.
+
+Syntax:
+SELECT column_name
+FROM table_name
+WHERE column_name IN (value1, value2, value3);
+
+Example:
+SELECT *
+FROM emp111
+WHERE id IN (101, 102, 103);
+
+Equivalent Query using OR:
+
+SELECT *
+FROM emp111
+WHERE id = 101
+OR id = 102
+OR id = 103;
+
+
+ADVANTAGE OF IN
+-------------------------------------------------
+• Makes queries shorter
+• Easier to read
+• Better when checking multiple values
